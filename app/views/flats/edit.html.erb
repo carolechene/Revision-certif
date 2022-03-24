@@ -1,0 +1,19 @@
+<h1>Modify Flat # <%= @flat.id %></h1>
+
+<%= simple_form_for (@flat) do |f| %>
+  <div class="form-input">
+    <%= f.input :address, placeholder: "Your flat address" %>
+  </div>
+
+  <div class="form-input">
+    <%= f.input :description, placeholder: "Description" %>
+  </div>
+
+  <div class="form-input">
+    <%= f.input :price, placeholder: "Price per night" %>
+  </div>
+
+  <div class="btn-form">
+    <%= f.submit "Modify your flat", class: "btn-form" %>
+  </div>
+<% end %>

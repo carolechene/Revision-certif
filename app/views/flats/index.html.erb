@@ -1,0 +1,18 @@
+<h1>Flats</h1>
+
+<% @flats.each do |flat| %>
+  <div class="card-flat">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-flat-infos">
+      <h2>Flat #<%= flat.id%></h2>
+      <p><%= flat.address %></p>
+      <p><%= flat.description %></p>
+      <p><strong><%= flat.price %>€/night</strong></p>
+    </div>
+    <div>
+      <%= link_to edit_flat_path(flat), class: "edit-icon ms-3" do %>
+        <i class="fa-solid fa-pen"></i>
+      <% end %>
+    </div>
+  </div>
+<% end %>
